@@ -2,11 +2,14 @@ package pattern;
 
 import business.IComponent;
 
+/**
+ * This decorator class has-a reference to the object IComponent and defines an interface in accordance to the IComponent interface
+ */
 public abstract class Decorator implements IComponent {
     private IComponent component;
 
-    public Decorator(IComponent extras){
-        component = extras;
+    public Decorator(IComponent car){
+        component = car;
     }
 
 

@@ -2,6 +2,10 @@ package pattern;
 
 import business.IComponent;
 
+
+/**
+ * The add-on decorator
+ */
 public class Bluetooth extends  Decorator{
 
 

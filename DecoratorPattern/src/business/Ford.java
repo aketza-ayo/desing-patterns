@@ -1,7 +1,7 @@
 package business;
 
 /**
- *
+ * Defines an object of which an extra reposability can be added
  */
 public class Ford extends Car {
     @Override
@@ -11,6 +11,6 @@ public class Ford extends Car {
 
     @Override
     public String getDescription() {
-        return "business.Ford Focus 1.6 Zetec Manual";
+        return "Ford Focus 1.6 Zetec Manual";
     }
 }
