@@ -5,6 +5,10 @@ import pattern.*;
 
 import java.util.Scanner;
 
+/**
+ * This Driver class is the where the main method is and the starting point of the application. The idea of this demo is
+ * to show the use of the decorator pattern though an example.
+ */
 public class Driver {
 
 

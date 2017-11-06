@@ -2,6 +2,9 @@ package pattern;
 
 import business.IComponent;
 
+/**
+ * The add-on decorator
+ */
 public class Petrol extends Decorator {
 
     public Petrol(IComponent extra){

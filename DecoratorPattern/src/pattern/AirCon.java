@@ -2,6 +2,9 @@ package pattern;
 
 import business.IComponent;
 
+/**
+ * An add-on decorator that adds behavious to the Car object
+ */
 public class AirCon extends Decorator {
 
     public AirCon(IComponent extra){
