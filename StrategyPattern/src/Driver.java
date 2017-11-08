@@ -1,3 +1,8 @@
+
+/**
+ * This Driver class is the where the main method is and the starting point of the application. The idea of this demo is
+ * to show the use of the strategy pattern though an example.
+ */
 public class Driver {
     public static void main(String[] args) {
         System.out.println("Creating a dolphin");
