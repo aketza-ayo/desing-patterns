@@ -6,27 +6,35 @@ public class Driver {
     private static Book book = null;
     private static InformBook inform = new InformBook();
 
+    private static Sales sales;
+    private static Admin admin ;
+    private static StockSupplies stock;
+
     public static void main(String[] args) {
-        InformBook inform = new InformBook();
-        inform.register(new Sales());
-        inform.register(new Admin());
-        inform.register(new StockSupplies());
+//        InformBook inform = new InformBook();
+//        inform.register(new Sales());
+//        inform.register(new Admin());
+//        inform.register(new StockSupplies());
+//
+//        Book book = new Book();
+//        book.setTile("Java 8 Lambda functions");
+//        book.setCondition(BookCondition.DAMAGED);
+//
+//        Library library = new Library();
+//        library.returnBook(book);
 
-        Book book = new Book();
-        book.setTile("Java 8 Lambda functions");
-        book.setCondition(BookCondition.DAMAGED);
-
-        Library library = new Library();
-        library.returnBook(book);
-
-//        startCommandLineApp();
+        startCommandLineApp();
 
     }
 
     private static void startCommandLineApp(){
+        System.out.println("Notice: This example simulates a library where each time a reader returns a book the\n" +
+                "returnBook() method is executed. If the reader returns a book that is damaged then the application warns\n" +
+                "the observers that are suscribed\n");
         int option ;
+        printInitialMenu();
         do {
-            printInitialMenu();
+
             option = sc.nextInt();
 
             switch (option) {
@@ -51,8 +59,7 @@ public class Driver {
                     break;
 
                 default:
-                    System.out.println("Please select an option from below");
-                    printInitialMenu();
+                    System.out.println("Please select another option from the menu");
                     break;
             }
         }while(option != 0);
@@ -63,27 +70,28 @@ public class Driver {
     private static void removeObserver(){
         System.out.println("Who would you like to un-suscribe");
         printObserverMenu();
-        int observerOption = sc.nextInt();
+        int observerOption = 0;
 
         do {
+            observerOption = sc.nextInt();
             switch (observerOption) {
                 case 1:
-                    inform.unregister(new Sales());
-                    observerOption = 0;
+                    inform.unregister(sales);
+                    System.out.println("Sales removed");
                     break;
 
                 case 2:
-                    inform.unregister(new Admin());
-                    observerOption = 0;
+                    inform.unregister(admin);
+                    System.out.println("Admin removed");
                     break;
 
                 case 3:
-                    inform.unregister(new StockSupplies());
-                    observerOption = 0;
+                    inform.unregister(stock);
+                    System.out.println("Stock removed");
                     break;
 
                 case 0:
-                    // do nothing
+                    printInitialMenu();
                     break;
 
                 default:
@@ -96,32 +104,39 @@ public class Driver {
     private static void addObserver(){
         System.out.println("Who would you like to notify");
         printObserverMenu();
-        int observerOption = sc.nextInt();
+        int observerOption = 0;
 
         do {
+            observerOption = sc.nextInt();
             switch (observerOption) {
                 case 1:
-                    inform.register(new Sales());
-                    observerOption = 0;
+                    sales = new Sales();
+                    inform.register(sales);
+                    System.out.println("Added Sales");
                     break;
 
                 case 2:
-                    inform.register(new Admin());
-                    observerOption = 0;
+                    admin = new Admin();
+                    inform.register(admin);
+                    System.out.println("Added Admin");
                     break;
 
                 case 3:
-                    inform.register(new StockSupplies());
-                    observerOption = 0;
+                    stock = new StockSupplies();
+                    inform.register(stock);
+                    System.out.println("Added Stock Supplies");
                     break;
 
                 case 0:
                     // do nothing
+                    printInitialMenu();
                     break;
 
                 default:
-                    printObserverMenu();
+                    System.out.println("Try again");
                     break;
+
+
             }
         }while(observerOption != 0);
     }
@@ -132,7 +147,7 @@ public class Driver {
         System.out.println("* 1. Sales                *");
         System.out.println("* 2. Admin                *");
         System.out.println("* 3. Stock                *");
-        System.out.println("* 0. Exit                 *");
+        System.out.println("* 0. Go Back              *");
         System.out.println("***************************");
     }
 
@@ -140,7 +155,7 @@ public class Driver {
         if(book == null){
             System.out.println("Nothing to return.");
         }else{
-            System.out.println("What's the condition the condition of the book you are returning");
+            System.out.println("What's the condition of the book you are returning");
             printBookConditionMenu();
             int bookCondition = sc.nextInt();
 
@@ -178,6 +193,8 @@ public class Driver {
 
             Library library = new Library();
             library.returnBook(book);
+            book = null;
+            System.out.println("\nPress 0 to exit or choose another option");
         }
     }
 
