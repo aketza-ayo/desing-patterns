@@ -1,2 +1,2 @@
 # desing-patterns
-A collection of mini applications with its specific design pattern
+A collection of mini command line applications with its specific design pattern
