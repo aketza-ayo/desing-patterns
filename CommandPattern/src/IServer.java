@@ -1,3 +1,7 @@
+/**
+ * The different server locations need to implement this interface because each one of the concrete server has its own
+ * way for doing things.
+ */
 public interface IServer {
 
     public void shutDown();

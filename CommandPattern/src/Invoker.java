@@ -1,3 +1,6 @@
+/**
+ * This class asks the command object to execute the request
+ */
 public class Invoker {
 
     private Command command;

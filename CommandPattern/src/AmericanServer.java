@@ -1,3 +1,6 @@
+/**
+ * This class implements the IServer and here is where the logic is business logic implemented.
+ */
 public class AmericanServer implements IServer {
     @Override
     public void shutDown() {
