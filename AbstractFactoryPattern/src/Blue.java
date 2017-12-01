@@ -1,3 +1,7 @@
+/**
+ * Defines an object of a product that the corresponding concrete factory is responsible to create. At the same
+ * time of implementing the interface of the abstract product.
+ */
 public class Blue extends Colour {
 
     private boolean isPrimary;

@@ -1,3 +1,7 @@
+/**
+ * This class is the equivalent of a client and only uses the interfaces declares in the factory and in the
+ * abstract products.
+ */
 public class Driver {
 
     public static void main(String[] args) {

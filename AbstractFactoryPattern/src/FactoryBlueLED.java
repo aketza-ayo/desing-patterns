@@ -1,3 +1,7 @@
+/**
+ * This is the concrete factory class. It implements the operations for the creation of the objects of the
+ * concrete products
+ */
 public class FactoryBlueLED extends AbstractFactoryTv {
 
     @Override

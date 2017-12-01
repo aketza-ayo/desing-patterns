@@ -1,3 +1,6 @@
+/**
+ * Declares an interface for the objects of a type of product
+ */
 public abstract class TV {
 
     private String brand;

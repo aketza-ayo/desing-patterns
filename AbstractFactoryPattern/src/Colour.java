@@ -1,4 +1,6 @@
-
+/**
+ * Declares an interface for the objects of a type of product
+ */
 public abstract class Colour {
 
     private String description;
