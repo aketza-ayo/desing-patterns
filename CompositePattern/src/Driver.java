@@ -1,3 +1,7 @@
+/**
+ * This is the Client class. Manipulates objects in the composition through the Component interface. The clients
+ * use the interface Employee to interact with objects of the Composite structure.
+ */
 public class Driver {
 
     public static void main(String[] args) {

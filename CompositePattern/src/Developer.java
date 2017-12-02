@@ -1,3 +1,6 @@
+/**
+ * This class represents the leaf objects in the structure (a leaf has no children).
+ */
 public class Developer implements Employee {
 
     private String status;

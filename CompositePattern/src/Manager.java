@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This is the Composite class that defines the behaviour for objects having children. Stores child
+ * components and implements child related operations in the component interface.
+ */
 public class Manager implements Employee {
 
     private String status;
